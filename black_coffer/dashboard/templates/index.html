@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+   <style>
+        /* Add custom CSS styles here */
+        #visualization {
+            width: 100%;
+            height: 400px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Data Visualization Dashboard</a>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-primary" role="alert">
+                    Welcome to the Data Visualization Dashboard! Use the filters on the left to explore the data.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Filters -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Filters</h5>
+                        <!-- Filters -->
+                        <div class="form-group">
+                        <label for="endYear">End Year:</label>      
+                        <select id="endYear">              
+                <option value="">All</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2030">2030</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+                <option value="2036">2036</option>
+                <option value="2040">2040</option>
+                <option value="2041">2041</option>
+                <option value="2046">2046</option>
+                <option value="2050">2050</option>
+                <option value="2051">2051</option>
+                <option value="2055">2055</option>
+                <option value="2060">2060</option>
+                <option value="2126">2126</option>
+                <option value="2200">2200</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="topics">Topics:</label>
+                        <select id="topics">
+                <option value="">All</option>
+                <option value="workforce">workforce</option>
+                <option value="worker">worker</option>
+                <option value="work">work</option>
+                <option value="wealth">wealth</option>
+                <option value="water">water</option>
+                <option value="Washington">Washington</option>
+                <option value="war">war</option>
+                <option value="vehicle">vehicle</option>
+                <option value="unemployment">unemployment</option>
+                <option value="transportation">transportation</option>
+                <option value="transport">transport</option>
+                <option value="trade">trade</option>
+                <option value="tourist">tourist</option>
+                <option value="terrorism">terrorism</option>
+                <option value="tension">tension</option>
+                <option value="technology">technology</option>
+                <option value="tax">tax</option>
+                <option value="strategy">strategy</option>
+                <option value="storm">storm</option>
+                <option value="software">software</option>
+                <option value="shortage">shortage</option>
+                <option value="shale gas">shale gas</option>
+                <option value="security">security</option>
+                <option value="robot">robot</option>
+                <option value="risk">risk</option>
+                <option value="revenue">revenue</option>
+                <option value="resource">resource</option>
+                <option value="production">production</option>
+                <option value="power">power</option>
+                <option value="population">population</option>
+                <option value="pollution">pollution</option>
+                <option value="politics">politics</option>
+                <option value="policy">policy</option>
+                <option value="plastic">plastic</option>
+                <option value="peak oil">peak oil</option>
+                <option value="oil">oil</option>
+                <option value="nuclear">nuclear</option>
+                <option value="money">money</option>
+                <option value="material">material</option>
+                <option value="market">market</option>
+                <option value="investment">investment</option>
+                <option value="interest rate">interest rate</option>
+                <option value="infrastructure">infrastructure</option>
+                <option value="information">information</option>
+                <option value="inflation">inflation</option>
+                <option value="industry">industry</option>
+                <option value="ice">ice</option>
+                <option value="growth">growth</option>
+                <option value="greenhouse gas">greenhouse gas</option>
+                <option value="government">government</option>
+                <option value="gdp">gdp</option>
+                <option value="gasoline">gasoline</option>
+                <option value="gas">gas</option>
+                <option value="gamification">gamification</option>
+                <option value="fracking">fracking</option>
+                <option value="fossil fuel">fossil fuel</option>
+                <option value="food">food</option>
+                <option value="finance">finance</option>
+                <option value="farm">farm</option>
+                <option value="factory">factory</option>
+                <option value="export">export</option>
+                <option value="energy">energy</option>
+                <option value="emission">emission</option>
+                <option value="electricity">electricity</option>
+                <option value="election">election</option>
+                <option value="economy">economy</option>
+                <option value="economic growth">economic growth</option>
+                <option value="economic">economic</option>
+                <option value="demand">demand</option>
+                <option value="debt">debt</option>
+                <option value="data">data</option>
+                <option value="crisis">crisis</option>
+                <option value="consumption">consumption</option>
+                <option value="consumer">consumer</option>
+                <option value="communication">communication</option>
+                <option value="coal">coal</option>
+                <option value="clothing">clothing</option>
+                <option value="climate change">climate change</option>
+                <option value="climate">climate</option>
+                <option value="city">city</option>
+                <option value="change">change</option>
+                <option value="carbon">carbon</option>
+                <option value="car">car</option>
+                <option value="capital">capital</option>
+                <option value="business">business</option>
+                <option value="building">building</option>
+                <option value="brexit">brexit</option>
+                <option value="biofuel">biofuel</option>
+                <option value="battery">battery</option>
+                <option value="bank">bank</option>
+                <option value="automaker">automaker</option>
+                <option value="asylum">asylum</option>
+                <option value="artificial intelligence">artificial intelligence</option>
+                <option value="aquaculture">aquaculture</option>
+                <option value="agriculture">agriculture</option>
+                <option value="administration">administration</option>
+                <option value="3D">3D</option>
+            
+            <!-- Add more options as needed -->
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="sector">Sector:</label>
+                        <select id="sector">
+                <option value="">All</option>
+                <option value="Water">Water</option>
+                <option value="Transport">Transport</option>
+                <option value="Tourism & hospitality">Tourism & hospitality</option>
+                <option value="Support services">Support services</option>
+                <option value="Security">Security</option>
+                <option value="Retail">Retail</option>
+                <option value="Media & entertainment">Media & entertainment</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Government">Government</option>
+                <option value="Food & agriculture">Food & agriculture</option>
+                <option value="Financial services">Financial services</option>
+                <option value="Environment">Environment</option>
+                <option value="Energy">Energy</option>
+                <option value="Construction">Construction</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Aerospace & defence">Aerospace & defence</option>
+                <!-- Add more options as needed -->
+
+                
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="region">Region:</label>
+                        <select id="region">
+                <option value="">All</option>
+                <option value="World">World</option>
+                <option value="Western Europe">Western Europe</option>
+                <option value="Western Asia">Western Asia</option>
+                <option value="Western Africa">Western Africa</option>
+                <option value="Southern Europe">Southern Europe</option>
+                <option value="Southern Asia">Southern Asia</option>
+                <option value="Southern Africa">Southern Africa</option>
+                <option value="South-Eastern Asia">South-Eastern Asia</option>
+                <option value="South America">South America</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Northern Europe">Northern Europe</option>
+                <option value="Northern America">Northern America</option>
+                <option value="Northern Africa">Northern Africa</option>
+                <option value="Europe">Europe</option>
+                <option value="Eastern Europe">Eastern Europe</option>
+                <option value="Eastern Asia">Eastern Asia</option>
+                <option value="Eastern Africa">Eastern Africa</option>
+                <option value="Central Asia">Central Asia</option>
+                <option value="Central America">Central America</option>
+                <option value="Central Africa">Central Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                        </select>
+                        </div>
+                        <div class="form-group"> 
+                        <label for="pest">Pest:</label>
+                        <select id="pest">
+                <option value="">All</option>
+                <option value="3D Printing Progress">3D Printing Progress</option>
+                <option value="4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE">4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE</option>
+                <option value="About Best Binary Options Strategy">About Best Binary Options Strategy</option>
+                <option value="Abq">Abq</option>
+                <option value="Activist Post">Activist Post</option>
+                <option value="Adam Curry">Adam Curry</option>
+                <option value="African Arguments">African Arguments</option>
+                <option value="African Development Bank">African Development Bank</option>
+                <option value="agriworldsa">agriworldsa</option>
+                <option value="AgWeb - The Home Page of Agriculture">AgWeb - The Home Page of Agriculture</option>
+                <option value="AHDB">AHDB</option>
+                <option value="Aljazeera.com">Aljazeera.com</option>
+                <option value="AllAfrica">AllAfrica</option>
+                <option value="allianzglobalinvestors">allianzglobalinvestors</option>
+                <option value="AMERICAN COUNCIL ON SCIENCE AND HEALTH">AMERICAN COUNCIL ON SCIENCE AND HEALTH</option>
+                <option value="amundi">amundi</option>
+                <option value="arabellaadvisors">arabellaadvisors</option>
+                <option value="Arangkada Philippines">Arangkada Philippines</option>
+                <option value="aswm">aswm</option>
+                <option value="Atlantic Council">Atlantic Council</option>
+                <option value="atradius">atradius</option>
+                <option value="Australian Government">Australian Government</option>
+                <option value="Australian Government Department of Defence">Australian Government Department of Defence</option>
+                <option value="Avi Melamed">Avi Melamed</option>
+                <option value="Azonano">Azonano</option>
+                <option value="bankofcanada">bankofcanada</option>
+                <option value="bankofengland">bankofengland</option>
+                <option value="BBC News Technology">BBC News Technology</option>
+                <option value="Bearnobull">Bearnobull</option>
+                <option value="Before It's News | Alternative News | UFO | Beyond Science | True News | Prophecy News | People Powered News">Before It's News | Alternative News | UFO | Beyond Science | True News | Prophecy News | People Powered News</option>
+                <option value="betterenergy">betterenergy</option>
+                <option value="Biofuels Digest">Biofuels Digest</option>
+                <option value="biologicaldiversity">biologicaldiversity</option>
+                <option value="biomassmagazine">biomassmagazine</option>
+                <option value="Bloomberg Business">Bloomberg Business</option>
+                <option value="Bloomberg New Energy Finance">Bloomberg New Energy Finance</option>
+                <option value="Blue and Green Tomorrow">Blue and Green Tomorrow</option>
+                <option value="BorneoPost Online">BorneoPost Online</option>
+                <option value="briandcolwell">briandcolwell</option>
+                <option value="Brookings Institute">Brookings Institute</option>
+                <option value="Business Green">Business Green</option>
+                <option value="Business Insider">Business Insider</option>
+                <option value="Business Standard">Business Standard</option>
+                <option value="Business Wire">Business Wire</option>
+                <option value="CAFrackFacts">CAFrackFacts</option>
+                <option value="CAJ News Africa">CAJ News Africa</option>
+                <option value="Canadian Biomass">Canadian Biomass</option>
+                <option value="Carbon Brief">Carbon Brief</option>
+                <option value="cargill">cargill</option>
+                <option value="Cars.co.za">Cars.co.za</option>
+                <option value="CBO">CBO</option>
+                <option value="CCN: Financial Bitcoin & Cryptocurrency News">CCN: Financial Bitcoin & Cryptocurrency News</option>
+                <option value="CDC">CDC</option>
+                <option value="Channel News Asia">Channel News Asia</option>
+                <option value="Cii Radio">Cii Radio</option>
+                <option value="CIO">CIO</option>
+                <option value="Citibank">Citibank</option>
+                <option value="CleanTechnica">CleanTechnica</option>
+                <option value="clientadvisoryservices">clientadvisoryservices</option>
+                <option value="Climate Change News">Climate Change News</option>
+                <option value="Climate News Network">Climate News Network</option>
+                <option value="cloudfront">cloudfront</option>
+                <option value="CNBC">CNBC</option>
+                <option value="CNNMoney">CNNMoney</option>
+                <option value="Common Dreams">Common Dreams</option>
+                <option value="conferenceseries">conferenceseries</option>
+                <option value="controleng">controleng</option>
+                <option value="Convenience Store Decisions">Convenience Store Decisions</option>
+                <option value="Cornell University">Cornell University</option>
+                <option value="Countries.com Global Content">Countries.com Global Content</option>
+                <option value="cpzulia">cpzulia</option>
+                <option value="creamermedia">creamermedia</option>
+                <option value="Critical Threats">Critical Threats</option>
+                <option value="CSIS">CSIS</option>
+                <option value="Cushman & Wakefield">Cushman & Wakefield</option>
+                <option value="Cushman & Wakefield Blog">Cushman & Wakefield Blog</option>
+                <option value="dailyquiddity">dailyquiddity</option>
+                <option value="dailytexanonline">dailytexanonline</option>
+                <option value="Days Of Year">Days Of Year</option>
+                <option value="Digitalist Magazine">Digitalist Magazine</option>
+                <option value="">All</option>
+                <option value="DOE EIA 2013 Energy Conference">DOE EIA 2013 Energy Conference</option>
+                <option value="dpaq">dpaq</option>
+                <option value="Drill or drop?">Drill or drop?</option>
+                <option value="Drydock Magazine">Drydock Magazine</option>
+                <option value="DW.COM">DW.COM</option>
+                <option value="ebrd">ebrd</option>
+                <option value="ecesr">ecesr</option>
+                <option value="ECFR">ECFR</option>
+                <option value="Eco-Business.com">Eco-Business.com</option>
+                <option value="economy">economy</option>
+                <option value="Edge and Odds">Edge and Odds</option>
+                <option value="edie.net">edie.net</option>
+                <option value="EE News">EE News</option>
+                <option value="EGYPS">EGYPS</option>
+                <option value="EIA">EIA</option>
+                <option value="EIU">EIU</option>
+                <option value="Elsevier">Elsevier</option>
+                <option value="Embedded Computing Design">Embedded Computing Design</option>
+                <option value="energy news cyprus">energy news cyprus</option>
+                <option value="Energy Tomorrow">Energy Tomorrow</option>
+                <option value="Energy.gov Website">Energy.gov Website</option>
+                <option value="energyglobal">energyglobal</option>
+                <option value="Engineering News">Engineering News</option>
+                <option value="Environmental Leader">Environmental Leader</option>
+                <option value="environmentalpeacebuilding">environmentalpeacebuilding</option>
+                <option value="EPA">EPA</option>
+                <option value="EPS News">EPS News</option>
+                <option value="ESPAS">ESPAS</option>
+                <option value="ETEnergyworld.com">ETEnergyworld.com</option>
+                <option value="ethicalconsumer">ethicalconsumer</option>
+                <option value="ethicalmarkets">ethicalmarkets</option>
+                <option value="Euler Hermes">Euler Hermes</option>
+                <option value="Eurasia Group">Eurasia Group</option>
+                <option value="Euromoney">Euromoney</option>
+                <option value="Europa">Europa</option>
+                <option value="Europe in My Region">Europe in My Region</option>
+                <option value="European Central Bank">European Central Bank</option>
+                <option value="European Council">European Council</option>
+                <option value="European Environment Agency">European Environment Agency</option>
+                <option value="europeanclimate">europeanclimate</option>
+                <option value="EV Obsession">EV Obsession</option>
+                <option value="EY">EY</option>
+                <option value="Face2face Africa">Face2face Africa</option>
+                <option value="FAO">FAO</option>
+                <option value="farms">farms</option>
+                <option value="Farms.com">Farms.com</option>
+                <option value="FashionNetwork.com">FashionNetwork.com</option>
+                <option value="Fast Co-Exist">Fast Co-Exist</option>
+                <option value="Fews Net">Fews Net</option>
+                <option value="Finance Magnates">Finance Magnates</option>
+                <option value="Fitch">Fitch</option>
+                <option value="FoodQualityNews.com">FoodQualityNews.com</option>
+                <option value="Foreign Policy">Foreign Policy</option>
+                <option value="Fox Business">Fox Business</option>
+                <option value="Freedonia">Freedonia</option>
+                <option value="Freenewspos">Freenewspos</option>
+                <option value="friday-thinking">friday-thinking</option>
+                <option value="Future Earth">Future Earth</option>
+                <option value="Future in Focus">Future in Focus</option>
+                <option value="Future Market Insights">Future Market Insights</option>
+                <option value="Future Timeline">Future Timeline</option>
+                <option value="FutureinFocus">FutureinFocus</option>
+                <option value="Futureseek Link Digest">Futureseek Link Digest</option>
+                <option value="Futurity">Futurity</option>
+                <option value="FX Empire">FX Empire</option>
+                <option value="g7g20">g7g20</option>
+                <option value="Gartner">Gartner</option>
+                <option value="Gas 2">Gas 2</option>
+                <option value="gasstrategies">gasstrategies</option>
+                <option value="GE Reports">GE Reports</option>
+                <option value="Gii Research">Gii Research</option>
+                <option value="Gizmodo Australia">Gizmodo Australia</option>
+                <option value="Global Information Inc">Global Information Inc</option>
+                <option value="Global Money Trends">Global Money Trends</option>
+                <option value="Global Money Trends Magazine">Global Money Trends Magazine</option>
+                <option value="globalfueleconomy">globalfueleconomy</option>
+                <option value="globalizationpartners">globalizationpartners</option>
+                <option value="GlobalMeatNews.com">GlobalMeatNews.com</option>
+                <option value="globalmoneytrends">globalmoneytrends</option>
+                <option value="globalr2p">globalr2p</option>
+                <option value="Government of Ireland">Government of Ireland</option>
+                <option value="GreenBiz">GreenBiz</option>
+                <option value="greenerearthnews">greenerearthnews</option>
+                <option value="Guardian">Guardian</option>
+                <option value="Guardian Sustainable Business">Guardian Sustainable Business</option>
+                <option value="Guarini Center">Guarini Center</option>
+                <option value="Handelsblatt Global Edition">Handelsblatt Global Edition</option>
+                <option value="Hardin Tibbs">Hardin Tibbs</option>
+                <option value="HBR">HBR</option>
+                <option value="Hospitality Trends">Hospitality Trends</option>
+                <option value="Huffington Post">Huffington Post</option>
+                <option value="iamericas">iamericas</option>
+                <option value="IASTOPPERS">IASTOPPERS</option>
+                <option value="IBEF">IBEF</option>
+                <option value="ID TECH INDEX">ID TECH INDEX</option>
+                <option value="idc-community">idc-community</option>
+                <option value="IEA">IEA</option>
+                <option value="IEA.org">IEA.org</option>
+                <option value="IER">IER</option>
+                <option value="IFT">IFT</option>
+                <option value="IHS Engineering 360">IHS Engineering 360</option>
+                <option value="ihsmarkit">ihsmarkit</option>
+                <option value="IISS">IISS</option>
+                <option value="Imeche">Imeche</option>
+                <option value="IMF">IMF</option>
+                <option value="iMFdirect - The IMF Blog">iMFdirect - The IMF Blog</option>
+                <option value="Industrial Control Security">Industrial Control Security</option>
+                <option value="Industry Week">Industry Week</option>
+                <option value="Informed Choice Chartered Financial Planners in Cranleigh">Informed Choice Chartered Financial Planners in Cranleigh</option>
+                <option value="Infracircle">Infracircle</option>
+                <option value="Innovaro">Innovaro</option>
+                <option value="Innovate UK">Innovate UK</option>
+                <option value="Innovations Report">Innovations Report</option>
+                <option value="inputsmonitor">inputsmonitor</option>
+                <option value="INSEAD Knowledge">INSEAD Knowledge</option>
+                <option value="Inside Climate News">Inside Climate News</option>
+                <option value="Institutional Investor">Institutional Investor</option>
+                <option value="Insurance Journal">Insurance Journal</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="International Banker">International Banker</option>
+                <option value="International Business Times">International Business Times</option>
+                <option value="International Monetary Fund (IMF)">International Monetary Fund (IMF)</option>
+                <option value="Investopedia">Investopedia</option>
+                <option value="IRENA">IRENA</option>
+                <option value="IRENA newsroom">IRENA newsroom</option>
+                <option value="ISA">ISA</option>
+                <option value="Jachin Capital">Jachin Capital</option>
+                <option value="JD Supra">JD Supra</option>
+                <option value="jeita">jeita</option>
+                <option value="Justmeans">Justmeans</option>
+                <option value="Khaleej Times">Khaleej Times</option>
+                <option value="khorreports-palmoil">khorreports-palmoil</option>
+                <option value="knomad">knomad</option>
+                <option value="Koenig Investment Advisory">Koenig Investment Advisory</option>
+                <option value="Lawfare">Lawfare</option>
+                <option value="Le·gal In·sur·rec·tion">Le·gal In·sur·rec·tion</option>
+                <option value="LiveMint">LiveMint</option>
+                <option value="LNG">LNG</option>
+                <option value="maltawinds.com">maltawinds.com</option>
+                <option value="Manufacturing Operations Technology Viewpoints">Manufacturing Operations Technology Viewpoints</option>
+                <option value="MAPI">MAPI</option>
+                <option value="Maplecroft">Maplecroft</option>
+                <option value="marketrealist">marketrealist</option>
+                <option value="Mast">Mast</option>
+                <option value="McKinsey & Company">McKinsey & Company</option>
+                <option value="McKinsey Quarterly">McKinsey Quarterly</option>
+                <option value="Media Center">Media Center</option>
+                <option value="MENA-Forum">MENA-Forum</option>
+                <option value="metalprices">metalprices</option>
+                <option value="Middle East Eye">Middle East Eye</option>
+                <option value="Middle East Online">Middle East Online</option>
+                <option value="Mind Commerce">Mind Commerce</option>
+                <option value="MIT Sloan Management Review">MIT Sloan Management Review</option>
+                <option value="MIT Technology Review">MIT Technology Review</option>
+                <option value="Motor Magazine">Motor Magazine</option>
+                <option value="MRC">MRC</option>
+                <option value="murc">murc</option>
+                <option value="Nanotechnology Innovation">Nanotechnology Innovation</option>
+                <option value="Nation of Change">Nation of Change</option>
+                <option value="National Geographic Society (blogs)">National Geographic Society (blogs)</option>
+                <option value="Nature">Nature</option>
+                <option value="nbk">nbk</option>
+                <option value="nbp">nbp</option>
+                <option value="NDTV">NDTV</option>
+                <option value="Neon Nettle">Neon Nettle</option>
+                <option value="New Security Beat">New Security Beat</option>
+                <option value="News">News</option>
+                <option value="News.com">News.com</option>
+                <option value="newscientist">newscientist</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Newsweek">Newsweek</option>
+                <option value="nextbigfuture">nextbigfuture</option>
+                <option value="Nexus Conference">Nexus Conference</option>
+                <option value="njc-cnm">njc-cnm</option>
+                <option value="No 2 Nuclear Power">No 2 Nuclear Power</option>
+                <option value="NWF">NWF</option>
+                <option value="NY Times">NY Times</option>
+                <option value="Ocean Acidification">Ocean Acidification</option>
+                <option value="OEM/Lube News">OEM/Lube News</option>
+                <option value="ogauthority">ogauthority</option>
+                <option value="Oil and Gas Journal">Oil and Gas Journal</option>
+                <option value="oilprice.com">oilprice.com</option>
+                <option value="oilvoice">oilvoice</option>
+                <option value="OklahomaMinerals.com">OklahomaMinerals.com</option>
+                <option value="OMFIF">OMFIF</option>
+                <option value="OPEC">OPEC</option>
+                <option value="Oxfam">Oxfam</option>
+                <option value="PDQFX news">PDQFX news</option>
+                <option value="Peak Prosperity">Peak Prosperity</option>
+                <option value="Phys Org">Phys Org</option>
+                <option value="Physics World">Physics World</option>
+                <option value="Pickens Plan">Pickens Plan</option>
+                <option value="Planetizen">Planetizen</option>
+                <option value="Planetsave">Planetsave</option>
+                <option value="platts">platts</option>
+                <option value="Politico">Politico</option>
+                <option value="polymerspaintcolourjournal">polymerspaintcolourjournal</option>
+                <option value="portfolioticker">portfolioticker</option>
+                <option value="PR Newswire">PR Newswire</option>
+                <option value="Predictive Analytics Times">Predictive Analytics Times</option>
+                <option value="PriceWaterhouseCoopers">PriceWaterhouseCoopers</option>
+                <option value="Project Syndicate">Project Syndicate</option>
+                <option value="Prospects for Development">Prospects for Development</option>
+                <option value="prsync">prsync</option>
+                <option value="PwC">PwC</option>
+                <option value="Quartz">Quartz</option>
+                <option value="ReadWrite">ReadWrite</option>
+                <option value="Real Estate Professional">Real Estate Professional</option>
+                <option value="Renewable Energy World">Renewable Energy World</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Resources for the Future">Resources for the Future</option>
+                <option value="Reuters">Reuters</option>
+                <option value="Rigzone">Rigzone</option>
+                <option value="RiskMap 2017">RiskMap 2017</option>
+                <option value="Robothub">Robothub</option>
+                <option value="RUSI">RUSI</option>
+                <option value="Russia Beyond The Headlines">Russia Beyond The Headlines</option>
+                <option value="saltlakecityheadlines">saltlakecityheadlines</option>
+                <option value="satprnews">satprnews</option>
+                <option value="savepassamaquoddybay">savepassamaquoddybay</option>
+                <option value="SBWire">SBWire</option>
+                <option value="Scania Group">Scania Group</option>
+                <option value="Science Daily">Science Daily</option>
+                <option value="Science News">Science News</option>
+                <option value="Scientific American">Scientific American</option>
+                <option value="Seeking Alpha">Seeking Alpha</option>
+                <option value="Shenandoah">Shenandoah</option>
+                <option value="SlideShare">SlideShare</option>
+                <option value="Slinking Toward Retirement">Slinking Toward Retirement</option>
+                <option value="Smart Grid Observer">Smart Grid Observer</option>
+                <option value="Society of Motor Manufacturers and Traders (SMMT)">Society of Motor Manufacturers and Traders (SMMT)</option>
+                <option value="source">source</option>
+                <option value="South China Morning Post">South China Morning Post</option>
+                <option value="South Sudan News Agency">South Sudan News Agency</option>
+                <option value="South World">South World</option>
+                <option value="Sputnik News">Sputnik News</option>
+                <option value="Stanford News">Stanford News</option>
+                <option value="Star Tribune">Star Tribune</option>
+                <option value="Strategy & Formerly Booz & Company">Strategy & Formerly Booz & Company</option>
+                <option value="sustainablebrands.com">sustainablebrands.com</option>
+                <option value="Sydney Morning Herald">Sydney Morning Herald</option>
+                <option value="Tactical Investor">Tactical Investor</option>
+                <option value="Tech Times">Tech Times</option>
+                <option value="Technavio">Technavio</option>
+                <option value="TeleTrade">TeleTrade</option>
+                <option value="The American Prospect">The American Prospect</option>
+                <option value="The Arab Gulf States Institute Washington">The Arab Gulf States Institute Washington</option>
+                <option value="The Atlantic">The Atlantic</option>
+                <option value="The Chirographer">The Chirographer</option>
+                <option value="The Conversation">The Conversation</option>
+                <option value="The Economist">The Economist</option>
+                <option value="The Engineer">The Engineer</option>
+                <option value="The Globe and Mail">The Globe and Mail</option>
+                <option value="The Guardian">The Guardian</option>
+                <option value="The Independent">The Independent</option>
+                <option value="The Jakarta Post">The Jakarta Post</option>
+                <option value="The Jamestown Foundation">The Jamestown Foundation</option>
+                <option value="THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA">THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA</option>
+                <option value="The Mainichi">The Mainichi</option>
+                <option value="The Market Mogul">The Market Mogul</option>
+                <option value="The Nation">The Nation</option>
+                <option value="The Next Web">The Next Web</option>
+                <option value="the star online">the star online</option>
+                <option value="The Ticker Tape">The Ticker Tape</option>
+                <option value="TheCable">TheCable</option>
+                <option value="theicct">theicct</option>
+                <option value="TheNews.NG">TheNews.NG</option>
+                <option value="therobotreport">therobotreport</option>
+                <option value="thespanisheconomy">thespanisheconomy</option>
+                <option value="Think Progress">Think Progress</option>
+                <option value="THISDAY LIVE">THISDAY LIVE</option>
+                <option value="Thomson Reuters">Thomson Reuters</option>
+                <option value="Time">Time</option>
+                <option value="Total">Total</option>
+                <option value="TRAC News">TRAC News</option>
+                <option value="Transport Environment">Transport Environment</option>
+                <option value="Transport Evolved">Transport Evolved</option>
+                <option value="Triple Pundit">Triple Pundit</option>
+                <option value="U.K. Ministry of Defense">U.K. Ministry of Defense</option>
+                <option value="U.S. Environmental Protection Agency">U.S. Environmental Protection Agency</option>
+                <option value="UK Government">UK Government</option>
+                <option value="UNEP">UNEP</option>
+                <option value="UNESCO">UNESCO</option>
+                <option value="unian">unian</option>
+                <option value="University Chronicle">University Chronicle</option>
+                <option value="University of Chicago">University of Chicago</option>
+                <option value="University of Latvia">University of Latvia</option>
+                <option value="uschamber">uschamber</option>
+                <option value="USDA">USDA</option>
+                <option value="Utility Dive">Utility Dive</option>
+                <option value="valburyresearch">valburyresearch</option>
+                <option value="Vanguard News">Vanguard News</option>
+                <option value="Verisk Maplecroft">Verisk Maplecroft</option>
+                <option value="veteranstoday">veteranstoday</option>
+                <option value="Virgin Atlantic">Virgin Atlantic</option>
+                <option value="VITA Technologies">VITA Technologies</option>
+                <option value="VOA">VOA</option>
+                <option value="Vox">Vox</option>
+                <option value="Wall Street Daily">Wall Street Daily</option>
+                <option value="War on the Rocks">War on the Rocks</option>
+                <option value="Washington Post">Washington Post</option>
+                <option value="watercanada">watercanada</option>
+                <option value="Wells Fargo">Wells Fargo</option>
+                <option value="westpandi">westpandi</option>
+                <option value="Wharton">Wharton</option>
+                <option value="What's Next">What's Next</option>
+                <option value="Wikipedia">Wikipedia</option>
+                <option value="Wired UK">Wired UK</option>
+                <option value="Wood McKenzie">Wood McKenzie</option>
+                <option value="World Bank">World Bank</option>
+                <option value="World Bank Group">World Bank Group</option>
+                <option value="World Energy News">World Energy News</option>
+                <option value="World Health">World Health</option>
+                <option value="worldculturepictorial">worldculturepictorial</option>
+                <option value="worldenergy">worldenergy</option>
+                <option value="Worldly">Worldly</option>
+                <option value="WSJ">WSJ</option>
+                <option value="www.narendramodi.in">www.narendramodi.in</option>
+                <option value="Yahoo Finance">Yahoo Finance</option>
+                <option value="Yahoo Finance Canada">Yahoo Finance Canada</option>
+                <option value="Yes Bank">Yes Bank</option>
+                <option value="Zawya">Zawya</option>
+                <option value="Zero Hedge">Zero Hedge</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="source">Source:</label>
+                        <select id="source">
+                <option value="">All</option>
+                <option value="controleng">controleng</option>
+                <option value="EE News">EE News</option>
+                <option value="idc-community">idc-community</option>
+                <option value="GE Reports">GE Reports</option>
+                <option value="McKinsey Quarterly">McKinsey Quarterly</option>
+                <option value="The Next Web">The Next Web</option>
+                <option value="Azonano">Azonano</option>
+                <option value="Utility Dive">Utility Dive</option>
+                <option value="Bloomberg Business">Bloomberg Business</option>
+                <option value="Edge and Odds">Edge and Odds</option>
+                <option value="VITA Technologies">VITA Technologies</option>
+                <option value="Futureseek Link Digest">Futureseek Link Digest</option>
+                <option value="betterenergy">betterenergy</option>
+                <option value="Innovaro">Innovaro</option>
+                <option value="IRENA">IRENA</option>
+                <option value="EV Obsession">EV Obsession</option>
+                <option value="Business Insider">Business Insider</option>
+                <option value="Media Center">Media Center</option>
+                <option value="Physics World">Physics World</option>
+                <option value="agriworldsa">agriworldsa</option>
+                <option value="FutureinFocus">FutureinFocus</option>
+                <option value="Digitalist Magazine">Digitalist Magazine</option>
+                <option value="MIT Sloan Management Review">MIT Sloan Management Review</option>
+                <option value="MIT Technology Review">MIT Technology Review</option>
+                <option value="GreenBiz">GreenBiz</option>
+                <option value="McKinsey & Company">McKinsey & Company</option>
+                <option value="Nanotechnology Innovation">Nanotechnology Innovation</option>
+                <option value="Guardian">Guardian</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Energy.gov Website">Energy.gov Website</option>
+                <option value="News">News</option>
+                <option value="NDTV">NDTV</option>
+                <option value="Rigzone">Rigzone</option>
+                <option value="HBR">HBR</option>
+                <option value="Middle East Eye">Middle East Eye</option>
+                <option value="g7g20">g7g20</option>
+                <option value="EY">EY</option>
+                <option value="Verisk Maplecroft">Verisk Maplecroft</option>
+                <option value="Guarini Center">Guarini Center</option>
+                <option value="MRC">MRC</option>
+                <option value="maltawinds.com">maltawinds.com</option>
+                <option value="Europa">Europa</option>
+                <option value="nbk">nbk</option>
+                <option value="the star online">the star online</option>
+                <option value="Face2face Africa">Face2face Africa</option>
+                <option value="Australian Government Department of Defence">Australian Government Department of Defence</option>
+                <option value="Oil and Gas Journal">Oil and Gas Journal</option>
+                <option value="National Geographic Society (blogs)">National Geographic Society (blogs)</option>
+                <option value="Critical Threats">Critical Threats</option>
+                <option value="LNG">LNG</option>
+                <option value="Eurasia Group">Eurasia Group</option>
+                <option value="iMFdirect - The IMF Blog">iMFdirect - The IMF Blog</option>
+                <option value="CNNMoney">CNNMoney</option>
+                <option value="ISA">ISA</option>
+                <option value="CleanTechnica">CleanTechnica</option>
+                <option value="Bloomberg New Energy Finance">Bloomberg New Energy Finance</option>
+                <option value="CSIS">CSIS</option>
+                <option value="Freenewspos">Freenewspos</option>
+                <option value="Project Syndicate">Project Syndicate</option>
+                <option value="The Jamestown Foundation">The Jamestown Foundation</option>
+                <option value="New Security Beat">New Security Beat</option>
+                <option value="OPEC">OPEC</option>
+                <option value="World Bank Group">World Bank Group</option>
+                <option value="RiskMap 2017">RiskMap 2017</option>
+                <option value="Lawfare">Lawfare</option>
+                <option value="Nation of Change">Nation of Change</option>
+                <option value="Global Money Trends">Global Money Trends</option>
+                <option value="Before It's News | Alternative News | UFO | Beyond Science | True News| Prophecy News | People Powered News">Before It's News | Alternative News | UFO | Beyond Science | True News| Prophecy News | People Powered News</option>
+                <option value="Resources for the Future">Resources for the Future</option>
+                <option value="Sputnik News">Sputnik News</option>
+                <option value="unian">unian</option>
+                <option value="marketrealist">marketrealist</option>
+                <option value="INSEAD Knowledge">INSEAD Knowledge</option>
+                <option value="Mast">Mast</option>
+                <option value="aswm">aswm</option>
+                <option value="Global Money Trends Magazine">Global Money Trends Magazine</option>
+                <option value="environmentalpeacebuilding">environmentalpeacebuilding</option>
+                <option value="Wired UK">Wired UK</option>
+                <option value="gasstrategies">gasstrategies</option>
+                <option value="War on the Rocks">War on the Rocks</option>
+                <option value="ETEnergyworld.com">ETEnergyworld.com</option>
+                <option value="uschamber">uschamber</option>
+                <option value="Reuters">Reuters</option>
+                <option value="Politico">Politico</option>
+                <option value="PwC">PwC</option>
+                <option value="newscientist">newscientist</option>
+                <option value="Avi Melamed">Avi Melamed</option>
+                <option value="IEA">IEA</option>
+                <option value="South World">South World</option>
+                <option value="Innovate UK">Innovate UK</option>
+                <option value="DOE EIA 2013 Energy Conference">DOE EIA 2013 Energy Conference</option>
+                <option value="Nexus Conference">Nexus Conference</option>
+                <option value="Biofuels Digest">Biofuels Digest</option>
+                <option value="edie.net">edie.net</option>
+                <option value="Cars.co.za">Cars.co.za</option>
+                <option value="The Arab Gulf States Institute Washington">The Arab Gulf States Institute Washington</option>
+                <option value="4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE">4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE</option>
+                <option value="OEM/Lube News">OEM/Lube News</option>
+                <option value="RUSI">RUSI</option>
+                <option value="OMFIF">OMFIF</option>
+                <option value="VOA">VOA</option>
+                <option value="PDQFX news">PDQFX news</option>
+                <option value="polymerspaintcolourjournal">polymerspaintcolourjournal</option>
+                <option value="Shenandoah">Shenandoah</option>
+                <option value="globalmoneytrends">globalmoneytrends</option>
+                <option value="IISS">IISS</option>
+                <option value="Adam Curry">Adam Curry</option>
+                <option value="Business Green">Business Green</option>
+                <option value="Vox">Vox</option>
+                <option value="LiveMint">LiveMint</option>
+                <option value="GlobalMeatNews.com">GlobalMeatNews.com</option>
+                <option value="Fox Business">Fox Business</option>
+                <option value="South China Morning Post">South China Morning Post</option>
+                <option value="FAO">FAO</option>
+                <option value="BorneoPost Online">BorneoPost Online</option>
+                <option value="The Chirographer">The Chirographer</option>
+                <option value="Transport Environment">Transport Environment</option>
+                <option value="WSJ">WSJ</option>
+                <option value="Convenience Store Decisions">Convenience Store Decisions</option>
+                <option value="Seeking Alpha">Seeking Alpha</option>
+                <option value="ethicalconsumer">ethicalconsumer</option>
+                <option value="The Jakarta Post">The Jakarta Post</option>
+                <option value="The Nation">The Nation</option>
+                <option value="Farms.com">Farms.com</option>
+                <option value="portfolioticker">portfolioticker</option>
+                <option value="FoodQualityNews.com">FoodQualityNews.com</option>
+                <option value="USDA">USDA</option>
+                <option value="Investopedia">Investopedia</option>
+                <option value="clientadvisoryservices">clientadvisoryservices</option>
+                <option value="Zawya">Zawya</option>
+                <option value="World Bank">World Bank</option>
+                <option value="Phys Org">Phys Org</option>
+                <option value="MAPI">MAPI</option>
+                <option value="Wall Street Daily">Wall Street Daily</option>
+                <option value="Industry Week">Industry Week</option>
+                <option value="South Sudan News Agency">South Sudan News Agency</option>
+                <option value="PR Newswire">PR Newswire</option>
+                <option value="EIA">EIA</option>
+                <option value="Abq">Abq</option>
+                <option value="nextbigfuture">nextbigfuture</option>
+                <option value="AllAfrica">AllAfrica</option>
+                <option value="African Arguments">African Arguments</option>
+                <option value="Cii Radio">Cii Radio</option>
+                <option value="FX Empire">FX Empire</option>
+                <option value="THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA">THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA</option>
+                <option value="khorreports-palmoil">khorreports-palmoil</option>
+                <option value="Canadian Biomass">Canadian Biomass</option>
+                <option value="Informed Choice Chartered Financial Planners in Cranleigh">Informed Choice Chartered Financial Planners in Cranleigh</option>
+                <option value="Slinking Toward Retirement">Slinking Toward Retirement</option>
+                <option value="Gas 2">Gas 2</option>
+                <option value="Technavio">Technavio</option>
+                <option value="JD Supra">JD Supra</option>
+                <option value="Le·gal In·sur·rec·tion">Le·gal In·sur·rec·tion</option>
+                <option value="Koenig Investment Advisory">Koenig Investment Advisory</option>
+                <option value="Citibank">Citibank</option>
+                <option value="BBC News Technology">BBC News Technology</option>
+                <option value="Russia Beyond The Headlines">Russia Beyond The Headlines</option>
+                <option value="ihsmarkit">ihsmarkit</option>
+                <option value="Gizmodo Australia">Gizmodo Australia</option>
+                <option value="CNBC">CNBC</option>
+                <option value="www.narendramodi.in">www.narendramodi.in</option>
+                <option value="dpaq">dpaq</option>
+                <option value="europeanclimate">europeanclimate</option>
+                <option value="TeleTrade">TeleTrade</option>
+                <option value="The Economist">The Economist</option>
+                <option value="THISDAY LIVE">THISDAY LIVE</option>
+                <option value="thespanisheconomy">thespanisheconomy</option>
+                <option value="The Conversation">The Conversation</option>
+                <option value="metalprices">metalprices</option>
+                <option value="economy">economy</option>
+                <option value="amundi">amundi</option>
+                <option value="Finance Magnates">Finance Magnates</option>
+                <option value="friday-thinking">friday-thinking</option>
+                <option value="Future Timeline">Future Timeline</option>
+                <option value="Zero Hedge">Zero Hedge</option>
+                <option value="Wikipedia">Wikipedia</option>
+                <option value="Oxfam">Oxfam</option>
+                <option value="IBEF">IBEF</option>
+                <option value="Aljazeera.com">Aljazeera.com</option>
+                <option value="worldenergy">worldenergy</option>
+                <option value="The Ticker Tape">The Ticker Tape</option>
+                <option value="njc-cnm">njc-cnm</option>
+                <option value="Cushman & Wakefield">Cushman & Wakefield</option>
+                <option value="Fitch">Fitch</option>
+                <option value="Countries.com Global Content">Countries.com Global Content</option>
+                <option value="The Market Mogul">The Market Mogul</option>
+                <option value="MENA-Forum">MENA-Forum</option>
+                <option value="Blue and Green Tomorrow">Blue and Green Tomorrow</option>
+                <option value="Engineering News">Engineering News</option>
+                <option value="oilvoice">oilvoice</option>
+                <option value="Freedonia">Freedonia</option>
+                <option value="Climate News Network">Climate News Network</option>
+                <option value="Washington Post">Washington Post</option>
+                <option value="globalfueleconomy">globalfueleconomy</option>
+                <option value="The Globe and Mail">The Globe and Mail</option>
+                <option value="DW.COM">DW.COM</option>
+                <option value="Elsevier">Elsevier</option>
+                <option value="Days Of Year">Days Of Year</option>
+                <option value="Virgin Atlantic">Virgin Atlantic</option>
+                <option value="Government of Ireland">Government of Ireland</option>
+                <option value="The Engineer">The Engineer</option>
+                <option value="Middle East Online">Middle East Online</option>
+                <option value="Fast Co-Exist">Fast Co-Exist</option>
+                <option value="IER">IER</option>
+                <option value="AHDB">AHDB</option>
+                <option value="Institutional Investor">Institutional Investor</option>
+                <option value="Bearnobull">Bearnobull</option>
+                <option value="International Monetary Fund (IMF)">International Monetary Fund (IMF)</option>
+                <option value="dailyquiddity">dailyquiddity</option>
+                <option value="westpandi">westpandi</option>
+                <option value="European Council">European Council</option>
+                <option value="Activist Post">Activist Post</option>
+                <option value="U.S. Environmental Protection Agency">U.S. Environmental Protection Agency</option>
+                <option value="Scania Group">Scania Group</option>
+                <option value="Common Dreams">Common Dreams</option>
+                <option value="theicct">theicct</option>
+                <option value="nbp">nbp</option>
+                <option value="University Chronicle">University Chronicle</option>
+                <option value="Pickens Plan">Pickens Plan</option>
+                <option value="Thomson Reuters">Thomson Reuters</option>
+                <option value="greenerearthnews">greenerearthnews</option>
+                <option value="EPS News">EPS News</option>
+                <option value="Imeche">Imeche</option>
+                <option value="Foreign Policy">Foreign Policy</option>
+                <option value="OklahomaMinerals.com">OklahomaMinerals.com</option>
+                <option value="Time">Time</option>
+                <option value="Guardian Sustainable Business">Guardian Sustainable Business</option>
+                <option value="3D Printing Progress">3D Printing Progress</option>
+                <option value="creamermedia">creamermedia</option>
+                <option value="Australian Government">Australian Government</option>
+                <option value="veteranstoday">veteranstoday</option>
+                <option value="Environmental Leader">Environmental Leader</option>
+                <option value="ECFR">ECFR</option>
+                <option value="Gartner">Gartner</option>
+                <option value="Eco-Business.com">Eco-Business.com</option>
+                <option value="ogauthority">ogauthority</option>
+                <option value="UNESCO">UNESCO</option>
+                <option value="CIO">CIO</option>
+                <option value="briandcolwell">briandcolwell</option>
+                <option value="Ocean Acidification">Ocean Acidification</option>
+                <option value="Planetizen">Planetizen</option>
+                <option value="Strategy & Formerly Booz & Company">Strategy & Formerly Booz & Company</option>
+                <option value="U.K. Ministry of Defense">U.K. Ministry of Defense</option>
+                <option value="Infracircle">Infracircle</option>
+                <option value="Scientific American">Scientific American</option>
+                <option value="iamericas">iamericas</option>
+                <option value="biomassmagazine">biomassmagazine</option>
+                <option value="Prospects for Development">Prospects for Development</option>
+                <option value="European Central Bank">European Central Bank</option>
+                <option value="Industrial Control Security">Industrial Control Security</option>
+                <option value="Renewable Energy World">Renewable Energy World</option>
+                <option value="Transport Evolved">Transport Evolved</option>
+                <option value="ethicalmarkets.com">ethicalmarkets.com</option>
+                <option value="Justmeans">Justmeans</option>
+                <option value="Brookings Institute">Brookings Institute</option>
+                <option value="Gii Research">Gii Research</option>
+                <option value="Cushman & Wakefield Blog">Cushman & Wakefield Blog</option>
+                <option value="Motor Magazine">Motor Magazine</option>
+                <option value="International Business Times">International Business Times</option>
+                <option value="CDC">CDC</option>
+                <option value="ecesr">ecesr</option>
+                <option value="NWF">NWF</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="World Health">World Health</option>
+                <option value="arabellaadvisors">arabellaadvisors</option>
+                <option value="sustainablebrands.com">sustainablebrands.com</option>
+                <option value="EPA">EPA</option>
+                <option value="Quartz">Quartz</option>
+                <option value="cargill">cargill</option>
+                <option value="Tech Times">Tech Times</option>
+                <option value="biologicaldiversity">biologicaldiversity</option>
+                <option value="African Development Bank">African Development Bank</option>
+                <option value="Innovations Report">Innovations Report</option>
+                <option value="worldculturepictorial">worldculturepictorial</option>
+                <option value="Futurity">Futurity</option>
+                <option value="IHS Engineering 360">IHS Engineering 360</option>
+                <option value="cpzulia">cpzulia</option>
+                <option value="Drydock Magazine">Drydock Magazine</option>
+                <option value="CAFrackFacts">CAFrackFacts</option>
+                <option value="Inside Climate News">Inside Climate News</option>
+                <option value="Nature">Nature</option>
+                <option value="Maplecroft">Maplecroft</option>
+                <option value="IFT">IFT</option>
+                <option value="Future Earth">Future Earth</option>
+                <option value="Science Daily">Science Daily</option>
+                <option value="Drill or drop?">Drill or drop?</option>
+                <option value="Carbon Brief">Carbon Brief</option>
+                <option value="energyglobal">energyglobal</option>
+                <option value="The American Prospect">The American Prospect</option>
+                <option value="watercanada">watercanada</option>
+                <option value="Science News">Science News</option>
+                <option value="FashionNetwork.com">FashionNetwork.com</option>
+                <option value="CBO">CBO</option>
+                <option value="djsresearch">djsresearch</option>
+                <option value="EIU">EIU</option>
+                <option value="Planetsave">Planetsave</option>
+                <option value="Cornell University">Cornell University</option>
+                <option value="Euler Hermes">Euler Hermes</option>
+                <option value="Future in Focus">Future in Focus</option>
+                <option value="therobotreport">therobotreport</option>
+                <option value="Robothub">Robothub</option>
+                <option value="IMF">IMF</option>
+                <option value="TheNews.NG">TheNews.NG</option>
+                <option value="murc">murc</option>
+                <option value="European Environment Agency">European Environment Agency</option>
+                <option value="Climate Change News">Climate Change News</option>
+                <option value="Peak Prosperity">Peak Prosperity</option>
+                <option value="bankofcanada">bankofcanada</option>
+                <option value="IEA.org">IEA.org</option>
+                <option value="oilprice.com">oilprice.com</option>
+                <option value="Euromoney">Euromoney</option>
+                <option value="allianzglobalinvestors">allianzglobalinvestors</option>
+                <option value="Business Standard">Business Standard</option>
+                <option value="Triple Pundit">Triple Pundit</option>
+                <option value="SBWire">SBWire</option>
+                <option value="TRAC News">TRAC News</option>
+                <option value="Star Tribune">Star Tribune</option>
+                <option value="Yes Bank">Yes Bank</option>
+                <option value="World Energy News">World Energy News</option>
+                <option value="The Independent">The Independent</option>
+                <option value="Business Wire">Business Wire</option>
+                <option value="Tactical Investor">Tactical Investor</option>
+                <option value="NY Times">NY Times</option>
+                <option value="farms">farms</option>
+                <option value="Jachin Capital">Jachin Capital</option>
+                <option value="The Guardian">The Guardian</option>
+                <option value="Worldly">Worldly</option>
+                <option value="UK Government">UK Government</option>
+                <option value="The Mainichi">The Mainichi</option>
+                <option value="Channel News Asia">Channel News Asia</option>
+                <option value="Think Progress">Think Progress</option>
+                <option value="saltlakecityheadlines">saltlakecityheadlines</option>
+                <option value="globalizationpartners">globalizationpartners</option>
+                <option value="Society of Motor Manufacturers and Traders (SMMT)">Society of Motor Manufacturers and Traders (SMMT)</option>
+                <option value="Energy Tomorrow">Energy Tomorrow</option>
+                <option value="Handelsblatt Global Edition">Handelsblatt Global Edition</option>
+                <option value="About Best Binary Options Strategy">About Best Binary Options Strategy</option>
+                <option value="News.com">News.com</option>
+                <option value="Atlantic Council">Atlantic Council</option>
+                <option value="Mind Commerce">Mind Commerce</option>
+                <option value="EGYPS">EGYPS</option>
+                <option value="AMERICAN COUNCIL ON SCIENCE AND HEALTH">AMERICAN COUNCIL ON SCIENCE AND HEALTH</option>
+                <option value="Insurance Journal">Insurance Journal</option>
+                <option value="Manufacturing Operations Technology Viewpoints">Manufacturing Operations Technology Viewpoints</option>
+                <option value="satprnews">satprnews</option>
+                <option value="Total">Total</option>
+                <option value="Yahoo Finance">Yahoo Finance</option>
+                <option value="IRENA newsroom">IRENA newsroom</option>
+                <option value="Huffington Post">Huffington Post</option>
+                <option value="Wood McKenzie">Wood McKenzie</option>
+                <option value="Hospitality Trends">Hospitality Trends</option>
+                <option value="International Banker">International Banker</option>
+                <option value="Sydney Morning Herald">Sydney Morning Herald</option>
+                <option value="Fews Net">Fews Net</option>
+                <option value="Predictive Analytics Times">Predictive Analytics Times</option>
+                <option value="What's Next">What's Next</option>
+                <option value="ID TECH INDEX">ID TECH INDEX</option>
+                <option value="savepassamaquoddybay">savepassamaquoddybay</option>
+                <option value="Global Information Inc">Global Information Inc</option>
+                <option value="prsync">prsync</option>
+                <option value="TheCable">TheCable</option>
+                <option value="ESPAS">ESPAS</option>
+                <option value="ebrd">ebrd</option>
+                <option value="The Atlantic">The Atlantic</option>
+                <option value="knomad">knomad</option>
+                <option value="Khaleej Times">Khaleej Times</option>
+                <option value="SlideShare">SlideShare</option>
+                <option value="bankofengland">bankofengland</option>
+                <option value="CAJ News Africa">CAJ News Africa</option>
+                <option value="Embedded Computing Design">Embedded Computing Design</option>
+                <option value="Vanguard News">Vanguard News</option>
+                <option value="atradius">atradius</option>
+                <option value="Real Estate Professional">Real Estate Professional</option>
+                <option value="Wharton">Wharton</option>
+                <option value="Newsweek">Newsweek</option>
+                <option value="jeita">jeita</option>
+                <option value="Arangkada Philippines">Arangkada Philippines</option>
+                <option value="Hardin Tibbs">Hardin Tibbs</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="platts">platts</option>
+                <option value="No 2 Nuclear Power">No 2 Nuclear Power</option>
+                <option value="Yahoo Finance Canada">Yahoo Finance Canada</option>
+                <option value="University of Chicago">University of Chicago</option>
+                <option value="Future Market Insights">Future Market Insights</option>
+                <option value="Wells Fargo">Wells Fargo</option>
+                <option value="IASTOPPERS">IASTOPPERS</option>
+                <option value="University of Latvia">University of Latvia</option>
+                <option value="inputsmonitor">inputsmonitor</option>
+                <option value="cloudfront">cloudfront</option>
+                <option value="AgWeb - The Home Page of Agriculture">AgWeb - The Home Page of Agriculture</option>
+                <option value="valburyresearch">valburyresearch</option>
+                <option value="ReadWrite">ReadWrite</option>
+                <option value="Stanford News">Stanford News</option>
+                <option value="Neon Nettle">Neon Nettle</option>
+                <option value="Smart Grid Observer">Smart Grid Observer</option>
+                <option value="CCN: Financial Bitcoin & Cryptocurrency News">CCN: Financial Bitcoin & Cryptocurrency News</option>
+                <option value="PriceWaterhouseCoopers">PriceWaterhouseCoopers</option>
+                <option value="globalr2p">globalr2p</option>
+                <option value="conferenceseries">conferenceseries</option>
+                <option value="dailytexanonline">dailytexanonline</option>
+                <option value="energy news cyprus">energy news cyprus</option>
+                <option value="UNEP">UNEP</option>
+                <option value="Europe in My Region">Europe in My Region</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="Swot">S W O T:</label>
+                        <select id="swot">
+                <option value="">All</option>
+                <option value="3D Printing Progress">3D Printing Progress</option>
+                <option value="4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE">4th Annual Congress and Expo on Biofuels and Bioenergy April 27-28 2017 Dubai UAE</option>
+                <option value="About Best Binary Options Strategy">About Best Binary Options Strategy</option>
+                <option value="Abq">Abq</option>
+                <option value="Activist Post">Activist Post</option>
+                <option value="Adam Curry">Adam Curry</option>
+                <option value="African Arguments">African Arguments</option>
+                <option value="African Development Bank">African Development Bank</option>
+                <option value="agriworldsa">agriworldsa</option>
+                <option value="AgWeb - The Home Page of Agriculture">AgWeb - The Home Page of Agriculture</option>
+                <option value="AHDB">AHDB</option>
+                <option value="Aljazeera.com">Aljazeera.com</option>
+                <option value="AllAfrica">AllAfrica</option>
+                <option value="allianzglobalinvestors">allianzglobalinvestors</option>
+                <option value="AMERICAN COUNCIL ON SCIENCE AND HEALTH">AMERICAN COUNCIL ON SCIENCE AND HEALTH</option>
+                <option value="amundi">amundi</option>
+                <option value="arabellaadvisors">arabellaadvisors</option>
+                <option value="Arangkada Philippines">Arangkada Philippines</option>
+                <option value="aswm">aswm</option>
+                <option value="Atlantic Council">Atlantic Council</option>
+                <option value="atradius">atradius</option>
+                <option value="Australian Government">Australian Government</option>
+                <option value="Australian Government Department of Defence">Australian Government Department of Defence</option>
+                <option value="Avi Melamed">Avi Melamed</option>
+                <option value="Azonano">Azonano</option>
+                <option value="bankofcanada">bankofcanada</option>
+                <option value="bankofengland">bankofengland</option>
+                <option value="BBC News Technology">BBC News Technology</option>
+                <option value="Bearnobull">Bearnobull</option>
+                <option value="Before It's News | Alternative News | UFO | Beyond Science | True News| Prophecy News | People Powered News">Before It's News | Alternative News | UFO | Beyond Science | True News| Prophecy News | People Powered News</option>
+                <option value="betterenergy">betterenergy</option>
+                <option value="Biofuels Digest">Biofuels Digest</option>
+                <option value="biologicaldiversity">biologicaldiversity</option>
+                <option value="biomassmagazine">biomassmagazine</option>
+                <option value="Bloomberg Business">Bloomberg Business</option>
+                <option value="Bloomberg New Energy Finance">Bloomberg New Energy Finance</option>
+                <option value="Blue and Green Tomorrow">Blue and Green Tomorrow</option>
+                <option value="BorneoPost Online">BorneoPost Online</option>
+                <option value="briandcolwell">briandcolwell</option>
+                <option value="Brookings Institute">Brookings Institute</option>
+                <option value="Business Green">Business Green</option>
+                <option value="Business Insider">Business Insider</option>
+                <option value="Business Standard">Business Standard</option>
+                <option value="Business Wire">Business Wire</option>
+                <option value="CAFrackFacts">CAFrackFacts</option>
+                <option value="CAJ News Africa">CAJ News Africa</option>
+                <option value="Canadian Biomass">Canadian Biomass</option>
+                <option value="Carbon Brief">Carbon Brief</option>
+                <option value="cargill">cargill</option>
+                <option value="Cars.co.za">Cars.co.za</option>
+                <option value="CBO">CBO</option>
+                <option value="CCN: Financial Bitcoin & Cryptocurrency News">CCN: Financial Bitcoin & Cryptocurrency News</option>
+                <option value="CDC">CDC</option>
+                <option value="Channel News Asia">Channel News Asia</option>
+                <option value="Cii Radio">Cii Radio</option>
+                <option value="CIO">CIO</option>
+                <option value="Citibank">Citibank</option>
+                <option value="CleanTechnica">CleanTechnica</option>
+                <option value="clientadvisoryservices">clientadvisoryservices</option>
+                <option value="Climate Change News">Climate Change News</option>
+                <option value="Climate News Network">Climate News Network</option>
+                <option value="cloudfront">cloudfront</option>
+                <option value="CNBC">CNBC</option>
+                <option value="CNNMoney">CNNMoney</option>
+                <option value="Common Dreams">Common Dreams</option>
+                <option value="conferenceseries">conferenceseries</option>
+                <option value="controleng">controleng</option>
+                <option value="Convenience Store Decisions">Convenience Store Decisions</option>
+                <option value="Cornell University">Cornell University</option>
+                <option value="Countries.com Global Content">Countries.com Global Content</option>
+                <option value="cpzulia">cpzulia</option>
+                <option value="creamermedia">creamermedia</option>
+                <option value="Critical Threats">Critical Threats</option>
+                <option value="CSIS">CSIS</option>
+                <option value="Cushman & Wakefield">Cushman & Wakefield</option>
+                <option value="Cushman & Wakefield Blog">Cushman & Wakefield Blog</option>
+                <option value="dailyquiddity">dailyquiddity</option>
+                <option value="dailytexanonline">dailytexanonline</option>
+                <option value="Days Of Year">Days Of Year</option>
+                <option value="Digitalist Magazine">Digitalist Magazine</option>
+                <option value="djsresearch">djsresearch</option>
+                <option value="DOE EIA 2013 Energy Conference">DOE EIA 2013 Energy Conference</option>
+                <option value="dpaq">dpaq</option>
+                <option value="Drill or drop?">Drill or drop?</option>
+                <option value="Drydock Magazine">Drydock Magazine</option>
+                <option value="DW.COM">DW.COM</option>
+                <option value="ebrd">ebrd</option>
+                <option value="ecesr">ecesr</option>
+                <option value="ECFR">ECFR</option>
+                <option value="Eco-Business.com">Eco-Business.com</option>
+                <option value="economy">economy</option>
+                <option value="Edge and Odds">Edge and Odds</option>
+                <option value="edie.net">edie.net</option>
+                <option value="EE News">EE News</option>
+                <option value="EGYPS">EGYPS</option>
+                <option value="EIA">EIA</option>
+                <option value="EIU">EIU</option>
+                <option value="Elsevier">Elsevier</option>
+                <option value="Embedded Computing Design">Embedded Computing Design</option>
+                <option value="energy news cyprus">energy news cyprus</option>
+                <option value="Energy Tomorrow">Energy Tomorrow</option>
+                <option value="Energy.gov Website">Energy.gov Website</option>
+                <option value="energyglobal">energyglobal</option>
+                <option value="Engineering News">Engineering News</option>
+                <option value="Environmental Leader">Environmental Leader</option>
+                <option value="environmentalpeacebuilding">environmentalpeacebuilding</option>
+                <option value="EPA">EPA</option>
+                <option value="EPS News">EPS News</option>
+                <option value="ESPAS">ESPAS</option>
+                <option value="ETEnergyworld.com">ETEnergyworld.com</option>
+                <option value="ethicalconsumer">ethicalconsumer</option>
+                <option value="ethicalmarkets">ethicalmarkets</option>
+                <option value="Euler Hermes">Euler Hermes</option>
+                <option value="Eurasia Group">Eurasia Group</option>
+                <option value="Euromoney">Euromoney</option>
+                <option value="Europa">Europa</option>
+                <option value="Europe in My Region">Europe in My Region</option>
+                <option value="European Central Bank">European Central Bank</option>
+                <option value="European Council">European Council</option>
+                <option value="European Environment Agency">European Environment Agency</option>
+                <option value="europeanclimate">europeanclimate</option>
+                <option value="EV Obsession">EV Obsession</option>
+                <option value="EY">EY</option>
+                <option value="Face2face Africa">Face2face Africa</option>
+                <option value="FAO">FAO</option>
+                <option value="farms">farms</option>
+                <option value="Farms.com">Farms.com</option>
+                <option value="FashionNetwork.com">FashionNetwork.com</option>
+                <option value="Fast Co-Exist">Fast Co-Exist</option>
+                <option value="Fews Net">Fews Net</option>
+                <option value="Finance Magnates">Finance Magnates</option>
+                <option value="Fitch">Fitch</option>
+                <option value="FoodQualityNews.com">FoodQualityNews.com</option>
+                <option value="Foreign Policy">Foreign Policy</option>
+                <option value="Fox Business">Fox Business</option>
+                <option value="Freedonia">Freedonia</option>
+                <option value="Freenewspos">Freenewspos</option>
+                <option value="friday-thinking">friday-thinking</option>
+                <option value="Future Earth">Future Earth</option>
+                <option value="Future in Focus">Future in Focus</option>
+                <option value="Future Market Insights">Future Market Insights</option>
+                <option value="Future Timeline">Future Timeline</option>
+                <option value="FutureinFocus">FutureinFocus</option>
+                <option value="Futureseek Link Digest">Futureseek Link Digest</option>
+                <option value="Futurity">Futurity</option>
+                <option value="FX Empire">FX Empire</option>
+                <option value="g7g20">g7g20</option>
+                <option value="Gartner">Gartner</option>
+                <option value="Gas 2">Gas 2</option>
+                <option value="gasstrategies">gasstrategies</option>
+                <option value="GE Reports">GE Reports</option>
+                <option value="Gii Research">Gii Research</option>
+                <option value="Gizmodo Australia">Gizmodo Australia</option>
+                <option value="Global Information Inc">Global Information Inc</option>
+                <option value="Global Money Trends">Global Money Trends</option>
+                <option value="Global Money Trends Magazine">Global Money Trends Magazine</option>
+                <option value="globalfueleconomy">globalfueleconomy</option>
+                <option value="globalizationpartners">globalizationpartners</option>
+                <option value="GlobalMeatNews.com">GlobalMeatNews.com</option>
+                <option value="globalmoneytrends">globalmoneytrends</option>
+                <option value="globalr2p">globalr2p</option>
+                <option value="Government of Ireland">Government of Ireland</option>
+                <option value="GreenBiz">GreenBiz</option>
+                <option value="greenerearthnews">greenerearthnews</option>
+                <option value="Guardian">Guardian</option>
+                <option value="Guardian Sustainable Business">Guardian Sustainable Business</option>
+                <option value="Guarini Center">Guarini Center</option>
+                <option value="Handelsblatt Global Edition">Handelsblatt Global Edition</option>
+                <option value="Hardin Tibbs">Hardin Tibbs</option>
+                <option value="HBR">HBR</option>
+                <option value="Hospitality Trends">Hospitality Trends</option>
+                <option value="Huffington Post">Huffington Post</option>
+                <option value="iamericas">iamericas</option>
+                <option value="IASTOPPERS">IASTOPPERS</option>
+                <option value="IBEF">IBEF</option>
+                <option value="ID TECH INDEX">ID TECH INDEX</option>
+                <option value="idc-community">idc-community</option>
+                <option value="IEA">IEA</option>
+                <option value="IEA.org">IEA.org</option>
+                <option value="IER">IER</option>
+                <option value="IFT">IFT</option>
+                <option value="IHS Engineering 360">IHS Engineering 360</option>
+                <option value="ihsmarkit">ihsmarkit</option>
+                <option value="IISS">IISS</option>
+                <option value="Imeche">Imeche</option>
+                <option value="IMF">IMF</option>
+                <option value="iMFdirect - The IMF Blog">iMFdirect - The IMF Blog</option>
+                <option value="Industrial Control Security">Industrial Control Security</option>
+                <option value="Industry Week">Industry Week</option>
+                <option value="Informed Choice Chartered Financial Planners in Cranleigh">Informed Choice Chartered Financial Planners in Cranleigh</option>
+                <option value="Infracircle">Infracircle</option>
+                <option value="Innovaro">Innovaro</option>
+                <option value="Innovate UK">Innovate UK</option>
+                <option value="Innovations Report">Innovations Report</option>
+                <option value="inputsmonitor">inputsmonitor</option>
+                <option value="INSEAD Knowledge">INSEAD Knowledge</option>
+                <option value="Inside Climate News">Inside Climate News</option>
+                <option value="Institutional Investor">Institutional Investor</option>
+                <option value="Insurance Journal">Insurance Journal</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="International Banker">International Banker</option>
+                <option value="International Business Times">International Business Times</option>
+                <option value="International Monetary Fund (IMF)">International Monetary Fund (IMF)</option>
+                <option value="Investopedia">Investopedia</option>
+                <option value="IRENA">IRENA</option>
+                <option value="IRENA newsroom">IRENA newsroom</option>
+                <option value="ISA">ISA</option>
+                <option value="Jachin Capital">Jachin Capital</option>
+                <option value="JD Supra">JD Supra</option>
+                <option value="jeita">jeita</option>
+                <option value="Justmeans">Justmeans</option>
+                <option value="Khaleej Times">Khaleej Times</option>
+                <option value="khorreports-palmoil">khorreports-palmoil</option>
+                <option value="knomad">knomad</option>
+                <option value="Koenig Investment Advisory">Koenig Investment Advisory</option>
+                <option value="Lawfare">Lawfare</option>
+                <option value="Le·gal In·sur·rec·tion">Le·gal In·sur·rec·tion</option>
+                <option value="LiveMint">LiveMint</option>
+                <option value="LNG">LNG</option>
+                <option value="maltawinds.com">maltawinds.com</option>
+                <option value="Manufacturing Operations Technology Viewpoints">Manufacturing Operations Technology Viewpoints</option>
+                <option value="MAPI">MAPI</option>
+                <option value="Maplecroft">Maplecroft</option>
+                <option value="marketrealist">marketrealist</option>
+                <option value="Mast">Mast</option>
+                <option value="McKinsey & Company">McKinsey & Company</option>
+                <option value="McKinsey Quarterly">McKinsey Quarterly</option>
+                <option value="Media Center ">Media Center </option>
+                <option value="MENA-Forum">MENA-Forum</option>
+                <option value="metalprices">metalprices</option>
+                <option value="Middle East Eye">Middle East Eye</option>
+                <option value="Middle East Online">Middle East Online</option>
+                <option value="Mind Commerce">Mind Commerce</option>
+                <option value="MIT Sloan Management Review">MIT Sloan Management Review</option>
+                <option value="MIT Technology Review">MIT Technology Review</option>
+                <option value="Motor Magazine">Motor Magazine</option>
+                <option value="MRC">MRC</option>
+                <option value="murc">murc</option>
+                <option value="Nanotechnology Innovation">Nanotechnology Innovation</option>
+                <option value="Nation of Change">Nation of Change</option>
+                <option value="National Geographic Society (blogs)">National Geographic Society (blogs)</option>
+                <option value="Nature">Nature</option>
+                <option value="nbk">nbk</option>
+                <option value="nbp">nbp</option>
+                <option value="NDTV">NDTV</option>
+                <option value="Neon Nettle">Neon Nettle</option>
+                <option value="New Security Beat">New Security Beat</option>
+                <option value="News">News</option>
+                <option value="News.com">News.com</option>
+                <option value="newscientist">newscientist</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Newsweek">Newsweek</option>
+                <option value="nextbigfuture">nextbigfuture</option>
+                <option value="Nexus Conference">Nexus Conference</option>
+                <option value="njc-cnm">njc-cnm</option>
+                <option value="No 2 Nuclear Power">No 2 Nuclear Power</option>
+                <option value="NWF">NWF</option>
+                <option value="NY Times">NY Times</option>
+                <option value="Ocean Acidification">Ocean Acidification</option>
+                <option value="OEM/Lube News">OEM/Lube News</option>
+                <option value="ogauthority">ogauthority</option>
+                <option value="Oil and Gas Journal">Oil and Gas Journal</option>
+                <option value="oilprice.com">oilprice.com</option>
+                <option value="oilvoice">oilvoice</option>
+                <option value="OklahomaMinerals.com">OklahomaMinerals.com</option>
+                <option value="OMFIF">OMFIF</option>
+                <option value="OPEC">OPEC</option>
+                <option value="Oxfam">Oxfam</option>
+                <option value="PDQFX news">PDQFX news</option>
+                <option value="Peak Prosperity">Peak Prosperity</option>
+                <option value="Phys Org">Phys Org</option>
+                <option value="Physics World">Physics World</option>
+                <option value="Pickens Plan">Pickens Plan</option>
+                <option value="Planetizen">Planetizen</option>
+                <option value="Planetsave">Planetsave</option>
+                <option value="platts">platts</option>
+                <option value="Politico">Politico</option>
+                <option value="polymerspaintcolourjournal">polymerspaintcolourjournal</option>
+                <option value="portfolioticker">portfolioticker</option>
+                <option value="PR Newswire">PR Newswire</option>
+                <option value="Predictive Analytics Times">Predictive Analytics Times</option>
+                <option value="PriceWaterhouseCoopers">PriceWaterhouseCoopers</option>
+                <option value="Project Syndicate">Project Syndicate</option>
+                <option value="Prospects for Development">Prospects for Development</option>
+                <option value="prsync">prsync</option>
+                <option value="PwC">PwC</option>
+                <option value="Quartz">Quartz</option>
+                <option value="ReadWrite">ReadWrite</option>
+                <option value="Real Estate Professional">Real Estate Professional</option>
+                <option value="Renewable Energy World">Renewable Energy World</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Resources for the Future">Resources for the Future</option>
+                <option value="Reuters">Reuters</option>
+                <option value="Rigzone">Rigzone</option>
+                <option value="RiskMap 2017">RiskMap 2017</option>
+                <option value="Robothub">Robothub</option>
+                <option value="RUSI">RUSI</option>
+                <option value="Russia Beyond The Headlines">Russia Beyond The Headlines</option>
+                <option value="saltlakecityheadlines">saltlakecityheadlines</option>
+                <option value="satprnews">satprnews</option>
+                <option value="savepassamaquoddybay">savepassamaquoddybay</option>
+                <option value="SBWire">SBWire</option>
+                <option value="Scania Group">Scania Group</option>
+                <option value="Science Daily">Science Daily</option>
+                <option value="Science News">Science News</option>
+                <option value="Scientific American">Scientific American</option>
+                <option value="Seeking Alpha">Seeking Alpha</option>
+                <option value="Shenandoah">Shenandoah</option>
+                <option value="SlideShare">SlideShare</option>
+                <option value="Slinking Toward Retirement">Slinking Toward Retirement</option>
+                <option value="Smart Grid Observer">Smart Grid Observer</option>
+                <option value="Society of Motor Manufacturers and Traders (SMMT)">Society of Motor Manufacturers and Traders (SMMT)</option>
+                <option value="source">source</option>
+                <option value="South China Morning Post">South China Morning Post</option>
+                <option value="South Sudan News Agency">South Sudan News Agency</option>
+                <option value="South World">South World</option>
+                <option value="Sputnik News">Sputnik News</option>
+                <option value="Stanford News">Stanford News</option>
+                <option value="Star Tribune">Star Tribune</option>
+                <option value="Strategy & Formerly Booz & Company">Strategy & Formerly Booz & Company</option>
+                <option value="sustainablebrands.com">sustainablebrands.com</option>
+                <option value="Sydney Morning Herald">Sydney Morning Herald</option>
+                <option value="Tactical Investor">Tactical Investor</option>
+                <option value="Tech Times">Tech Times</option>
+                <option value="Technavio">Technavio</option>
+                <option value="TeleTrade">TeleTrade</option>
+                <option value="The American Prospect">The American Prospect</option>
+                <option value="The Arab Gulf States Institute Washington">The Arab Gulf States Institute Washington</option>
+                <option value="The Atlantic">The Atlantic</option>
+                <option value="The Chirographer">The Chirographer</option>
+                <option value="The Conversation">The Conversation</option>
+                <option value="The Economist">The Economist</option>
+                <option value="The Engineer">The Engineer</option>
+                <option value="The Globe and Mail">The Globe and Mail</option>
+                <option value="The Guardian">The Guardian</option>
+                <option value="The Independent">The Independent</option>
+                <option value="The Jakarta Post">The Jakarta Post</option>
+                <option value="The Jamestown Foundation">The Jamestown Foundation</option>
+                <option value="THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA">THE LEAGUE OF WOMEN VOTERS® OF THE FAIRFAX AREA</option>
+                <option value="The Mainichi">The Mainichi</option>
+                <option value="The Market Mogul">The Market Mogul</option>
+                <option value="The Nation">The Nation</option>
+                <option value="The Next Web">The Next Web</option>
+                <option value="the star online">the star online</option>
+                <option value="The Ticker Tape">The Ticker Tape</option>
+                <option value="TheCable">TheCable</option>
+                <option value="theicct">theicct</option>
+                <option value="TheNews.NG">TheNews.NG</option>
+                <option value="therobotreport">therobotreport</option>
+                <option value="thespanisheconomy">thespanisheconomy</option>
+                <option value="Think Progress">Think Progress</option>
+                <option value="THISDAY LIVE">THISDAY LIVE</option>
+                <option value="Thomson Reuters">Thomson Reuters</option>
+                <option value="Time">Time</option>
+                <option value="Total">Total</option>
+                <option value="TRAC News">TRAC News</option>
+                <option value="Transport Environment">Transport Environment</option>
+                <option value="Transport Evolved">Transport Evolved</option>
+                <option value="Triple Pundit">Triple Pundit</option>
+                <option value="U.K. Ministry of Defense">U.K. Ministry of Defense</option>
+                <option value="U.S. Environmental Protection Agency">U.S. Environmental Protection Agency</option>
+                <option value="UK Government">UK Government</option>
+                <option value="UNEP">UNEP</option>
+                <option value="UNESCO">UNESCO</option>
+                <option value="unian">unian</option>
+                <option value="University Chronicle">University Chronicle</option>
+                <option value="University of Chicago">University of Chicago</option>
+                <option value="University of Latvia">University of Latvia</option>
+                <option value="uschamber">uschamber</option>
+                <option value="USDA">USDA</option>
+                <option value="Utility Dive">Utility Dive</option>
+                <option value="valburyresearch">valburyresearch</option>
+                <option value="Vanguard News">Vanguard News</option>
+                <option value="Verisk Maplecroft">Verisk Maplecroft</option>
+                <option value="veteranstoday">veteranstoday</option>
+                <option value="Virgin Atlantic">Virgin Atlantic</option>
+                <option value="VITA Technologies">VITA Technologies</option>
+                <option value="VOA">VOA</option>
+                <option value="Vox">Vox</option>
+                <option value="Wall Street Daily">Wall Street Daily</option>
+                <option value="War on the Rocks">War on the Rocks</option>
+                <option value="Washington Post">Washington Post</option>
+                <option value="watercanada">watercanada</option>
+                <option value="Wells Fargo">Wells Fargo</option>
+                <option value="westpandi">westpandi</option>
+                <option value="Wharton">Wharton</option>
+                <option value="What's Next">What's Next</option>
+                <option value="Wikipedia">Wikipedia</option>
+                <option value="Wired UK">Wired UK</option>
+                <option value="Wood McKenzie">Wood McKenzie</option>
+                <option value="World Bank">World Bank</option>
+                <option value="World Bank Group">World Bank Group</option>
+                <option value="World Energy News">World Energy News</option>
+                <option value="World Health">World Health</option>
+                <option value="worldculturepictorial">worldculturepictorial</option>
+                <option value="worldenergy">worldenergy</option>
+                <option value="Worldly">Worldly</option>
+                <option value="WSJ">WSJ</option>
+                <option value="www.narendramodi.in">www.narendramodi.in</option>
+                <option value="Yahoo Finance">Yahoo Finance</option>
+                <option value="Yahoo Finance Canada">Yahoo Finance Canada</option>
+                <option value="Yes Bank">Yes Bank</option>
+                <option value="Zawya">Zawya</option>
+                <option value="Zero Hedge">Zero Hedge</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country">
+                <option value="">All</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Angola">Angola</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Belize">Belize</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="country">country</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Greece">Greece</option>
+                <option value="Hungary">Hungary</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libya">Libya</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Mali">Mali</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Poland">Poland</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Russia">Russia</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Spain">Spain</option>
+                <option value="Syria">Syria</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States of America">United States of America</option>
+                <option value="Venezuela">Venezuela</option>
+                        </select> 
+                        </div>      
+                        <!-- Add a button to apply filters -->
+                        <button id="SubmitBtn" class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+            <!--Visualization-->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Visualization</h5>
+                        <div id="visualization">
+                            <p class="text-muted">No data available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Summary Table</h5>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Intensity</th>
+                                        <th>Likelihood</th>
+                                        <th>Relevance</th>
+                                        <th>Year</th>
+                                        <th>Country</th>
+                                        <th>Topics</th>
+                                        <th>Region</th>
+                                        <th>City</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="data-table">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p class="text-muted">Data Visualization Dashboard &copy; 2022. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Function to fetch data from the database API
+        async function fetchDataFromAPI() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/data/');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                return data;
+            } catch(error) {
+                console.error('Error fetching data:', error.message);
+                return [];
+            }
+        }
+        // Function to filter data based on all selected filters
+        function filterData(endYear, topics, sector, region, pest, source, swot, country) {
+            let filteredData = data;          
+            // Apply filters
+            // Apply filters
+            if (endYear) {
+                filteredData = filteredData.filter(item => item.year <= endYear);
+            }
+            if (topics !== 'all') {
+                filteredData = filteredData.filter(item => item.topics === topics);
+            }
+            if (sector !== 'all') {
+                filteredData = filteredData.filter(item => item.sector === sector);
+            }
+            if (region !== 'all') {
+                filteredData = filteredData.filter(item => item.region === region);
+            }
+            if (pest !== 'all') {
+                filteredData = filteredData.filter(item => item.pest === pest);
+            }
+            if (source !== 'all') {
+                filteredData = filteredData.filter(item => item.source === source);
+            }
+            if (swot!== 'all') {
+                filteredData = filteredData.filter(item => item.swot === swot);
+            }
+            if (country !== 'all') {
+                filteredData = filteredData.filter(item => item.country === country);
+            }
+            // Add more filters as needed
+            return filteredData;
+        }
+
+            
+
+         // Function to display filtered data in the table
+        function displayDataInTable(filteredData) {
+            const tableBody = document.querySelector('#data-table');
+            // Clear previous data
+            tableBody.innerHTML = '';
+            // Populate table with filtered data
+            filteredData.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.intensity}</td>
+                    <td>${item.likelihood}</td>
+                    <td>${item.relevance}</td>
+                    <td>${item.year}</td>
+                    <td>${item.country}</td>
+                    <td>${item.topics}</td>
+                    <td>${item.region}</td>
+                    <td>${item.city}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+            // Event listener for submit button
+        document.getElementById('submitBtn').addEventListener('click', async function() {
+            // Get filter values
+            const endYear = parseInt(document.getElementById('endYear').value);
+            const topics = document.getElementById('topics  ').value;
+            const sector = document.getElementById('sector').value;
+            const region = document.getElementById('region').value;
+            const pest = document.getElementById('pest').value;
+            const source = document.getElementById('source').value;
+            const swot = document.getElementById('swot').value;
+            const country = document.getElementById('country').value;
+
+            // Fetch data from API
+            const data = await fetchDataFromAPI();
+            // Filter data based on selected filters
+            const filteredData = filterData(endYear, topics, sector, region, pest, source, swot, country);
+
+            // Display filtered data in the table
+            displayDataInTable(filteredData);
+        });
+    </script>
+</body> 
+</html>
